@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta  name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+    <title>Serviços</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Serviços Disponíveis</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nome do Serviço</th>
+                    <th>Descrição</th>
+                    <th>Preço (R$)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% serviços.forEach(servico => { %>
+                    <tr>
+                        <td><%= servico.nome %></td>
+                        <td><%= servico.descricao %></td>
+                        <td><%= servico.preco.toFixed(2) %></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

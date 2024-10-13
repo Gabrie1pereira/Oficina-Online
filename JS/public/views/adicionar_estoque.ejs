@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+    <title>Adicionar Peça ao Estoque</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Adicionar Peça ao Estoque</h2>
+        <form action="/estoque/adicionar" method="POST">
+            <div class="mb-3">
+                <label for="peça" class="form-label">Peça:</label>
+                <input type="text" class="form-control" id="peça" name="peça" required>
+            </div>
+            <div class="mb-3">
+                <label for="quantidade" class="form-label">Quantidade:</label>
+                <input type="number" class="form-control" id="quantidade" name="quantidade" required>
+            </div>
+            <div class="mb-3">
+                <label for="preço" class="form-label">Preço (R$):</label>
+                <input type="number" step="0.01" class="form-control" id="preço" name="preço" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Adicionar</button>
+        </form>
+    </div>
+</body>
+</html>
+ 
